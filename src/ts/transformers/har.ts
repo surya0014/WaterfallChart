@@ -34,7 +34,7 @@ import {
  * @param {HarTransformerOptions} options - HAR-parser-specific options
  * @returns WaterfallDocs
  */
-export function transformDoc(harData: Har | Log, options: HarTransformerOptions): WaterfallDocs {
+export function transformDoc(harData, options: HarTransformerOptions): WaterfallDocs {
   // make sure it's the *.log base node
   const data = (harData["log"] !== undefined ? harData["log"] : harData) as Log;
   const pages = getPages(data);
