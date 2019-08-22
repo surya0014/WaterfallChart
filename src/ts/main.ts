@@ -1,4 +1,3 @@
-import { Har } from "har-format";
 import { validateOptions } from "./helpers/parse";
 import { makeLegend as makeLegendInternal } from "./legend/legend";
 import Paging from "./paging/paging";
@@ -73,7 +72,7 @@ function PerfCascade(waterfallDocsData: WaterfallDocs, chartOptions: Partial<Cha
  * @param  {ChartOptions} options - PerfCascade options object
  * @returns {SVGSVGElement} - Chart SVG Element
  */
-export function fromHar(harData: Har, options: ChartOptions = {}): SVGSVGElement {
+export function fromHar(harData, options: ChartOptions = {}): SVGSVGElement {
   const harTransformerOptions = {
     ...defaultHarTransformerOptions,
     ...options,
